@@ -19,6 +19,7 @@ namespace GlobalX_Coding_Assessment.Implementation
             Success = false;
         }
 
+        //Check if the path is valid
         public void CheckPath()
         {
             if (File.Exists(Path.GetFullPath(FilePath)))
@@ -32,6 +33,7 @@ namespace GlobalX_Coding_Assessment.Implementation
             }
         }
 
+        //Read the names in the file
         public string[] ReadFile()
         {
             CheckPath();
@@ -46,6 +48,7 @@ namespace GlobalX_Coding_Assessment.Implementation
             }
         }
 
+        //Write the names in the file
         public void WriteFile(string[] names)
         {
             File.WriteAllLines(Path.Combine(Environment.CurrentDirectory, "sorted-names-list.txt"), names);

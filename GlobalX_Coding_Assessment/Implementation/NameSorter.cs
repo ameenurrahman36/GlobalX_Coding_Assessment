@@ -51,6 +51,7 @@ namespace GlobalX_Coding_Assessment.Implementation
                 string givenName = string.Empty;
                 string lastName = string.Empty;
 
+                //split the last name and give name and store it in a dictionary
                 for (int i = 0; i < length; i++)
                 {
                     if (i == length - 1)
@@ -65,6 +66,7 @@ namespace GlobalX_Coding_Assessment.Implementation
 
                 if (FullNames.ContainsKey(lastName))
                 {
+                    //there cannot be more than three given names for the same last name
                     base.CheckMoreThanThreeGivenName(FullNames[lastName].Count);
 
                     if (!Success)
@@ -94,7 +96,8 @@ namespace GlobalX_Coding_Assessment.Implementation
             {
                 lastNames.Add(item);
             }
-
+            
+            //sort the lastname and then the given names for that last name
             lastNames.Sort();
 
             foreach (var item in lastNames)
@@ -111,6 +114,7 @@ namespace GlobalX_Coding_Assessment.Implementation
                 }
             }
 
+            //write the sorted names to a file
             FileOperation.WriteFile(sortedFullNames.ToArray());
         }
     }

@@ -22,6 +22,7 @@ namespace GlobalX_Coding_Assessment.Abstract
 
         public abstract void SortNames();
 
+        //There should be atleast one name in the file
         public void CheckLength()
         {
             if (Names.Length == 0)

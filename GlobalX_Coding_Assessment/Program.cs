@@ -13,6 +13,7 @@ namespace GlobalX_Coding_Assessment
         {
             try
             {
+                //give the path of the unsorted file with the application exe in command line
                 if (args.Length == 0)
                 {
                     Console.WriteLine("Give the file path in argument. for ex. GlobalX_Coding_Assessment ./unsorted-names-list.txt");
